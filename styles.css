@@ -1,8 +1,43 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #111;
-  color: white;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.Logo-icon {
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GD-logo {
+  width: 500px;
+  height: 100%;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  gap: 200px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: medium;
+  font-size: 33px;
 }
 
 .slider {
@@ -45,4 +80,25 @@ body {
 
 .slide.expanded .content {
   opacity: 1;
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 100px;
+  color: #ffffff;
+}
+.pattern {
+  display: flex;
+  opacity: 0.5;
+
+}
+
+pattern-image {
+  width: 100%;
+  height: 50px;
 }
