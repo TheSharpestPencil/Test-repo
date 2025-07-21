@@ -10,20 +10,32 @@ display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
 .GD-logo {
   width: 500px;
   height: 100%;
 }
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.Header-text {
+  font-size: 30px;
+  text-align: center;
+  color: #ffffff;
   background-color: black;
   padding: 30px;
   position: relative;
   overflow: hidden;
 }
+.text-logo {
+width: 350px;
+height: auto;
+padding: 5px 0px 0px 25px;
+margin: 0px;
+}
 
+.by {
+  margin: -100px 0px 0px 0px;
+  padding: -100px 0px 0px 0px;
+}
 .nav-links {
   align-items: center;
   justify-content: center;
@@ -43,8 +55,15 @@ display: flex;
 .slider {
   display: flex;
   width: 100vw;
-  height: 400px;
+  height: 600px;
   overflow: hidden;
+}
+
+.logo-by-text {
+  position: absolute;
+  alight-items: center;
+  color: #ffffff;
+
 }
 
 .slide {
