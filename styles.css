@@ -2,89 +2,69 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #ffffff;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .Logo-icon {
-display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .GD-logo {
-  width: 500px;
-  height: 100%;
+  width: 90%;
+  max-width: 300px;
+  height: auto;
 }
+
 .Header-text {
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
   color: #ffffff;
   background-color: black;
-  padding: 30px;
+  padding: 20px;
   position: relative;
-  overflow: hidden;
 }
+
 .text-logo {
-width: 350px;
-height: auto;
-padding: 5px 0px 0px 25px;
-margin: 0px;
+  width: 250px;
+  height: auto;
+  padding-left: 10px;
 }
 
 .by {
-  margin: -100px 0px 0px 0px;
-  padding: -100px 0px 0px 0px;
-}
-.nav-links {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  gap: 200px;
+  margin-right: 5px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: medium;
-  font-size: 33px;
+.logo-by-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .slider {
   display: flex;
-  width: 100vw;
-  height: 600px;
-  overflow: hidden;
-}
-
-.logo-by-text {
-  position: absolute;
-  alight-items: center;
-  color: #ffffff;
-
+  flex-direction: column;
+  width: 100%;
 }
 
 .slide {
-  flex: 1;
-  position: relative;
-  transition: flex 0.5s ease, opacity 0.5s ease;
-  cursor: pointer;
-  overflow: hidden;
   background-size: cover;
   background-position: center;
-}
-
-.slide.retracted {
-  flex: 0.4;
-  opacity: 0.7;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  height: 80px;
+  position: relative;
+  cursor: pointer;
 }
 
 .slide.expanded {
-  flex: 3;
-  opacity: 1;
+  height: auto;
+  max-height: 1000px; /* Prevent runaway height */
+  padding-bottom: 20px;
 }
+
 
 .slide .content {
   position: absolute;
@@ -101,56 +81,63 @@ margin: 0px;
   opacity: 1;
 }
 
-footer {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  height: 100px;
-  color: #ffffff;
-}
-.pattern {
-  display: flex;
-  opacity: 0.5;
-
-}
-
-pattern-image {
-  width: 100%;
-  height: 50px;
-}
-
 .bullet-points {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
-  text-align: center;
-  
-  align-items: flex-start; /* Top vertically */
-  justify-content: flex-end; /* Left horizontally */
-
-
+  margin-top: 20px;
 }
 
 .bullet-points li {
-  position: relative;
-  top:0;
-  left:0;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 15px;
+  text-align: center;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
-  border: 2px solid rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  width: 300px;
-  height: 100px;
+  font-size: 16px;
+}
+
+.bullet-points li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.Footer {
+  background-color: black;
+  color: #fff;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  list-style: none;
-  color: #000000;
-  font-size: 20px;
-  
+  align-items: center;
+  height: 100px;
+}
+
+.pattern-image {
+  width: 100%;
+  max-height: 60px;
+  opacity: 0.5;
+}
+
+@media (max-width: 1080px) {
+  .Header-text {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .bullet-points li {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+.slide.expanded {
+  height: 500px; /* Adjusted for smaller screens */
+  max-height: 1000px; /* Prevent runaway height */
+  padding-bottom: 20px;
+}
+
 }
