@@ -1,18 +1,18 @@
 const slides = document.querySelectorAll('.slide');
 
+// Prevent button or link clicks from toggling the slide
+document.querySelectorAll('.slide a, .slide button').forEach(el => {
+  el.addEventListener('click', e => {
+    e.stopPropagation();
+  });
+});
+
 slides.forEach(slide => {
   slide.addEventListener('click', () => {
     if (slide.classList.contains('expanded')) {
-      // Clicking expanded slide retracts all to default state
-      slides.forEach(s => {
-        s.classList.remove('expanded', 'retracted');
-      });
+      slides.forEach(s => s.classList.remove('expanded'));
     } else {
-      // Expand clicked slide, retract others
-      slides.forEach(s => {
-        s.classList.remove('expanded', 'retracted');
-        if (s !== slide) s.classList.add('retracted');
-      });
+      slides.forEach(s => s.classList.remove('expanded'));
       slide.classList.add('expanded');
     }
   });
