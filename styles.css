@@ -9,12 +9,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
+  padding-bottom: 20px;
 }
 
 .GD-logo {
   width: 90%;
   max-width: 300px;
   height: auto;
+  padding: 50px,0;
 }
 
 .Header-text {
@@ -155,7 +158,6 @@ button {
 .footer-content {
   background-color: black;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 
