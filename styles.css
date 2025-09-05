@@ -152,6 +152,12 @@ button {
   width: 100%;
 }
 
+.footer-content {
+  background-color: black;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 
 /* Disable clicking inside collapsed slides */
 .slide:not(.expanded) a,
